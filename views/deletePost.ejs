@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+<div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSheet">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header border-bottom-0">
+          <h1 class="modal-title fs-5">Confirmation</h1>
+
+          <form action="/" method="get">
+            <button type="submit" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </form>
+        </div>
+
+        <div class="modal-body py-0">
+          <p>Are you sure you want to delete the blog Titled : <%= title %></p>
+        </div>
+        <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
+          <form action="/deleting" method="post">
+              <input type="hidden" name="index" value= "<%= index %>" />
+              <button type="submit" class="btn btn-lg btn-primary deleteButton">DELETE</button>
+          </form>
+          <button type="button" onclick="goBack()" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+        window.history.back();
+    }
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/" method="post" class="vertical-form">
+    <label for="titleText">Title :   </label>
+    <input type="text" id="blogTitleBox" name="titleText" required class="styled-input">
+    <label for="blogText">Write your blog :   </label>
+    <textarea  id="blogBox" name="blogText" required class="styled-textarea"></textarea>
+    <button type="submit" class="styled-button">Post</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<%- include("partials/footer.ejs") %>

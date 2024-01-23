@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/editPreview" method="post" class="vertical-form">
+    <label for="blogTitle">Title : </label>
+    <input type="text" id="blogTitleBox" name="newTitleText" value="<%= titleVal %>" required class="styled-input">
+    <label for="blogText">Write your blog : </label>
+    <textarea  id="blogBox" name="newBlogText" required class="styled-textarea"><%= blogVal %> </textarea>
+    <input type="hidden" name="index" value= "<%= index %>" />
+    <button type="submit" class="styled-button">Done</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<%- include("partials/footer.ejs") %>

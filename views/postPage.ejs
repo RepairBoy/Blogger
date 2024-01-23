@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="postPageTitle"><%= postTitle %></h1>
+
+<p class="postPageBlog"><%= postBlog %></p>
+
+<form action="/editPost" method="post" class="editButtonForm">
+    <input type="hidden" name="index" value= "<%= index %>" />
+    <button class="btn btn-secondary rounded-pill px-3" type="submit">Edit</button>
+</form>
+
+<form action="/deletePost" method="post" class="deleteButtonForm">
+    <input type="hidden" name="index" value= "<%= index %>" />
+    <button class="btn btn-danger rounded-pill px-3" type="submit">Delete</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<%- include("partials/footer.ejs") %>
